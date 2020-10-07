@@ -41,7 +41,7 @@ class Expense(models.Model):
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     sub_category = models.ForeignKey(SubCategory, on_delete=models.DO_NOTHING)
     date = models.DateField()
-    description = models.CharField()
+    description = models.CharField(max_length=250)
     amount = models.FloatField()
     consumability = models.ForeignKey(Consumability, on_delete=models.DO_NOTHING)
 
